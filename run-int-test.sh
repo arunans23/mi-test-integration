@@ -92,7 +92,7 @@ cd -
 mkdir -p $PRODUCT_REPOSITORY_PACK_DIR
 log_info "Copying product pack to Repository"
 [ -f $TESTGRID_DIR/$PRODUCT_NAME-$PRODUCT_VERSION*.zip ] && rm -f $TESTGRID_DIR/$PRODUCT_NAME-$PRODUCT_VERSION*.zip
-cd $TESTGRID_DIR && mv $PRODUCT_PACK_NAME $PRODUCT_NAME-$decremented_version && zip -qr $PRODUCT_NAME-$decremented_version.zip $PRODUCT_NAME-$decremented_version
+cd $TESTGRID_DIR && zip -qr $PRODUCT_NAME-$decremented_version.zip $PRODUCT_NAME-$decremented_version
 mv $TESTGRID_DIR/$PRODUCT_NAME-$decremented_version.zip $PRODUCT_REPOSITORY_PACK_DIR/.
 
 log_info "install pack into local maven Repository"
